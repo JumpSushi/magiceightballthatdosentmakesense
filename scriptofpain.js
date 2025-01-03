@@ -27,26 +27,26 @@ const answers= [
 ]
 
 const questionInput = document.getElementById('question');
-const eightBall = document.getElementById('eightball');
-const answerWindow = document.getElementById('answerwin');
-const answerText = document.getElementById('atext');
-const shakeButton = document.getElementById('shahkepls');
+const eightBall = document.getElementById('eight-ball');
+const answerWindow = document.getElementById('answer-window');
+const answerText = document.getElementById('answer-text');
+const shakeButton = document.getElementById('shake-button');
 
 function shakeBall() {
     if (!questionInput.value.trim()) return;
     eightBall.classList.add('shake');
-    answerWindow.style.opacity = 0;
+    answerWindow.style.opacity = '0';
     shakeButton.disabled = true;
     setTimeout(() => {
         eightBall.classList.remove('shake');
-        answerText.textContent=answers[Math.floor(Math.random()*answers.length)];
-        answerWindow.style.opacity = 1;
+        answerText.textContent = answers[Math.floor(Math.random() * answers.length)];
+        answerWindow.style.opacity = '1';
         shakeButton.disabled = false;
     }, 1000);
 }
 
 questionInput.addEventListener('input', () => {
-    shakeButton.disabled = !questionInput.value.trim(); 
+    shakeButton.disabled = !questionInput.value.trim();
 });
 
 eightBall.addEventListener('click', shakeBall);

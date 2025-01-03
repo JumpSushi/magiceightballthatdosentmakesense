@@ -5,49 +5,61 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: khaki;
+    font-family: system-ui, sans-serif;
     padding: 2rem;
-
 }
 
-.containter{
+.container {
     text-align: center;
-    width:100%;
+    width: 100%;
     max-width: 28rem;
 }
-h1{
-    color: rgb(0, 0, 0);
+
+h1 {
+    color: white;
     font-size: 2.25rem;
     margin-bottom: 0.5rem;
 }
 
-.subtitle{
+.subtitle {
     color: #a3a3a3;
     margin-bottom: 2rem;
 }
 
-input{
+input {
     width: 100%;
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 2px solid #383838;
+    border: 2px solid #404040;
     background: #262626;
-    color: rgb(0, 0, 0);
+    color: white;
     margin-bottom: 1.5rem;
     box-sizing: border-box;
 }
 
-input::placeholder{
-    color: #737373
+input::placeholder {
+    color: #737373;
 }
 
-.eightball{
+.eight-ball {
     width: 16rem;
     height: 16rem;
     background: black;
     border-radius: 50%;
     margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.answer-window {
+    width: 10rem;
+    height: 10rem;
+    background: #0047AB;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,34 +69,20 @@ input::placeholder{
     box-sizing: border-box;
 }
 
-.answerwin{
-    width: 10rem;
-    height: 10rem;
-    background: #0044a2;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s
-    padding 1rem;
-    box-sizing: border-box;
-
-}
-
-.atext{
-    color: rgb(0, 0, 0);
+.answer-text {
+    color: white;
     font-size: 1rem;
     font-weight: 500;
 }
 
-.shahkepls{
-    animation: shake 0.5s infinite;
+.shake {
+    animation: shake 0.3s infinite;
 }
 
-@keyframes shahkepls{
-    0%, 100% {transform: translate X(0)};
-    25% { transform: translateX(-5px) rotate(-5deg);}
-    75%{transform: translateX(5px) rotate(5deg)}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    75% { transform: translateX(5px) rotate(5deg); }
 }
 
 button {
@@ -92,20 +90,18 @@ button {
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
-    background: #0044A2;
-    color: rgb(0, 0, 0);
+    background: #0047AB;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 button:hover {
-    background: #003380
+    background: #003380;
 }
 
-button:disabled{
+button:disabled {
     background: #404040;
     cursor: not-allowed;
 }
-
-
