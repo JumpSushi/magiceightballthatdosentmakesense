@@ -5,8 +5,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #8b9e84;
-    font-family: system-ui, sans-serif;
+    background: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 2rem;
 }
 
@@ -17,13 +17,13 @@ body {
 }
 
 h1 {
-    color: white;
+    color: #333;
     font-size: 2.25rem;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    color: #a3a3a3;
+    color: #666;
     margin-bottom: 2rem;
 }
 
@@ -31,20 +31,24 @@ input {
     width: 100%;
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 2px solid #404040;
-    background: #262626;
-    color: white;
+    border: 2px solid #ccc;
+    background: #fff;
+    color: #333;
     margin-bottom: 1.5rem;
     box-sizing: border-box;
 }
 
 input::placeholder {
-    color: #737373;
+    color: #999;
 }
 
 .eight-ball {
-    width: 16rem;
-    height: 16rem;
+    width: 20vw;
+    height: 20vw;
+    max-width: 16rem;
+    max-height: 16rem;
+    min-width: 10rem;
+    min-height: 10rem;
     background: black;
     border-radius: 50%;
     margin: 0 auto 2rem;
@@ -52,13 +56,17 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
 }
 
 .answer-window {
-    width: 10rem;
-    height: 10rem;
-    background: #0047AB;
+    width: 12vw;
+    height: 12vw;
+    max-width: 10rem;
+    max-height: 10rem;
+    min-width: 6rem;
+    min-height: 6rem;
+    background: #007BFF;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -90,7 +98,7 @@ button {
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
-    background: #0047AB;
+    background: #007BFF;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -98,10 +106,10 @@ button {
 }
 
 button:hover {
-    background: #003380;
+    background: #0056b3;
 }
 
 button:disabled {
-    background: #404040;
+    background: #ccc;
     cursor: not-allowed;
 }
